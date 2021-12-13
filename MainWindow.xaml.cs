@@ -20,21 +20,28 @@ namespace gladiaddi
     /// </summary>
     public partial class MainWindow : Window
     {
-        const List<Gladiator> gladiators = null;
-        static Gladiator gladi = new Gladiator();
+        public List<Gladiator> gladiators = null;
+        public Gladiator PlayGladi { get; set; }
         public MainWindow()
         {
             InitializeComponent();
-            MyFrame.Navigate(new Start());
-            
+            MyFrame.Navigate(new Start());          
             
             
         }
         
         private void SetGladi(Gladiator gladiator)
         {
-            gladi = gladiator;
+            PlayGladi = gladiator;
+            
+            if (!gladiators.Contains(PlayGladi))
+            {
+                gladiators.Add(PlayGladi);
+                MyFrame.Navigate(new Menu(PlayGladi));
+
+            }
         }
+
 
     }
 }

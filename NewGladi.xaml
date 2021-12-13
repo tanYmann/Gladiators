@@ -12,19 +12,19 @@
 
         <StackPanel Background="White" Height="505" VerticalAlignment="Top" HorizontalAlignment="Left" Width="197">
             <Image x:Name="ImageMerkur" Height="134"  Source="GladiFace001.png" HorizontalAlignment="Left"/>
-            <RadioButton x:Name="MerkurMagicRadio" Content="Merkur Magic&#xA;" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="21" Width="101" GroupName="GladiChoice"/>
+            <RadioButton x:Name="MerkurMagicRadio" Content="Merkur Magic&#xA;" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="21" Width="101" GroupName="GladiChoice" Checked="OnChecked"/>
             <Image x:Name="ImageGladiBoy" Height="134"  Source="GladiFace002.png" HorizontalAlignment="Left"/>
             <RadioButton x:Name="GladiBoyRadio" Content="GladiBoy&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Height="21" Width="79" GroupName="GladiChoice" Checked="OnChecked"/>
             <Image x:Name="ImageBasher" Height="120" Source="GladiFace003.png" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="135"/>
 
-            <RadioButton x:Name="BasherRadio" Content="The Basher&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Height="21" Width="79" GroupName="GladiChoice"/>
-            
+            <RadioButton x:Name="BasherRadio" Content="The Basher&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Height="21" Width="79" GroupName="GladiChoice" Checked="OnChecked"/>
+
 
 
         </StackPanel>
         <StackPanel HorizontalAlignment="Right" Width="603" Background="White">
             <Label>
-                <TextBox Height="23" TextWrapping="Wrap" Text="Namen eingeben" Width="120"/>
+                <TextBox x:Name="TBName" Height="23" TextWrapping="Wrap" Text="Namen eingeben" Width="120"/>
             </Label>
             <Label>Ausdauer</Label>
             <TextBlock x:Name="StaminaText" TextWrapping="Wrap" Text="TextBlock"/>
@@ -38,7 +38,7 @@
             <TextBlock x:Name="DefenseText"  TextWrapping="Wrap" Text="TextBlock"/>
 
             <Label/>
-            <Button x:Name="GoBtn" Content="Go!!!" Click="OnClickGo"></Button>
+            <Button x:Name="GoBtn" Content="Go!!!" Click="OnClickGo" Margin="0,0,-0.143,0" HorizontalAlignment="Left" Width="603" Height="25"/>
 
         </StackPanel>
 

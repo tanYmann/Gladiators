@@ -12,10 +12,21 @@
 
     <Grid Background="White">
 
-        <StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock HorizontalAlignment="Center">Willkomen bei Gladiators</TextBlock>
-            <Button x:Name="StartBtn" Click="OnClickStart">Start</Button>
-            <Grid Height="100" />
+            <Rectangle Height="80"/>
+            <Button x:Name="StartBtn" Click="OnClickStart" Width="167" RenderTransformOrigin="0.431,2.792" Height="59" >
+                <Button.Background>
+                    <ImageBrush ImageSource="start.png"/>
+                </Button.Background> 
+            </Button>
+            <Grid Height="100" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="81*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="41*"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
         </StackPanel>
     </Grid>
 

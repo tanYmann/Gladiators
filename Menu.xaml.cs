@@ -23,28 +23,28 @@ namespace gladiaddi
     partial class Menu : Page
     {
         public Gladiator Gladi;
-        public Menu() 
         
+        public Menu()
         {
 
-
-
-      
-            InitializeComponent(); 
-            setGladiator();
-            listView.ItemsSource = gladiList;
-
+        }
+        public Menu (Gladiator gladiator)
+        
+        {      
+           
+            InitializeComponent();
+            GladíName.Text = gladiator.Name;
+            GladiStamina.Text = gladiator.Stamina.ToString();
+            GladiAttack.Text = gladiator.Attack.ToString();
+            GladiDefense.Text = gladiator.Defense.ToString();
+            GladiLevel.Text = gladiator.Level.ToString();
+            GladiXp.Text = gladiator.Xp.ToString();
           
-
         }
 
         public void setGladiator()
-        {
-            Gladi = gladiatorPlayer;
+        {        
             
-            
-            
-
         }
 
 

@@ -24,7 +24,7 @@ namespace gladiaddi
 
         public static void SetGladiator(Gladiator gladiator)
         {
-            Gladiator gladiator1 = gladiator;
+           
         }
     }
 
