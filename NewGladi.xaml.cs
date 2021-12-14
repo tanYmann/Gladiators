@@ -42,17 +42,19 @@ namespace gladiaddi
            {
                 case "MerkurMagicRadio":
 
-                    this.gladiatorPlayer.Name = "GladiBoy";
+                    this.gladiatorPlayer.Name = "MerkurMagic";
                     gladiatorPlayer.Stamina = 100;
                     gladiatorPlayer.Attack = 8;
                     gladiatorPlayer.Defense = 6;
                     this.gladiatorPlayer.ImgUrl = "GladiFace002.png";
-                    
+                    gladiatorPlayer.Level = 1;
+                    gladiatorPlayer.Xp = 0;
+
                     break;
 
                 case "GladiBoyRadio":
 
-                    this.gladiatorPlayer.Name = "MerkurMagic";
+                    this.gladiatorPlayer.Name = "GladiBoy";
                     gladiatorPlayer.Stamina = 100;
                     gladiatorPlayer.Attack = 8;
                     gladiatorPlayer.Defense = 6;

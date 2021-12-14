@@ -37,16 +37,38 @@ namespace gladiaddi
             GladiStamina.Text = gladiator.Stamina.ToString();
             GladiAttack.Text = gladiator.Attack.ToString();
             GladiDefense.Text = gladiator.Defense.ToString();
-            GladiLevel.Text = gladiator.Level.ToString();
+            GladiLevel.Text = SetLevel(gladiator).ToString();
             GladiXp.Text = gladiator.Xp.ToString();
+            Gladi = gladiator;
+            Gladi.Level = SetLevel(gladiator);
           
         }
-
+        public int SetLevel(Gladiator gladiator)
+        {
+           int level = 1;
+            for (int i = 0; i < 1000; i++)
+            {
+                if (gladiator.Xp / 100 == i)
+                    level = i + 1;
+            }
+                    
+           
+            
+            return level;
+        }
         public void setGladiator()
         {        
             
         }
 
+        private void OnFightBtnClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Fight(Gladi));
+        }
 
+        private void OnClickStatBtn(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Page1(Gladi));
+        }
     }
 }
