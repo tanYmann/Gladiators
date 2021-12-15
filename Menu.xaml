@@ -8,12 +8,12 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Menu">
 
-    <Grid Margin="0,0,0,0.286">
+    <Grid Margin="0,0,0,0.286" Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="1" Margin="10,10,10,230">
+        <StackPanel Grid.Column="1" Margin="0,10,10,229.714" HorizontalAlignment="Right" Width="80">
             <Button x:Name="trainBtn" Width="80" Height="30" Click="OnClickTrain">Trainieren</Button>
             <Button x:Name="fightBtn" Width="80" Height="30" Click="OnFightBtnClick">Kämpfen</Button>
             <Button x:Name="statBtn" Width="80" Height="30" Click="OnClickStatBtn">Statistik</Button>
@@ -21,7 +21,7 @@
         </StackPanel>
         <StackPanel Grid.Column="0">
             <Label>Name:</Label>
-            <TextBlock x:Name="GladíName" FontSize="40" />
+            <TextBlock x:Name="GladiName" FontSize="40" />
             <Label>Stamina:</Label>
             <TextBlock x:Name="GladiStamina" FontSize="40"/>
             <Label>Attack:</Label>
@@ -33,7 +33,17 @@
             <Label>XP:</Label>
             <TextBlock x:Name="GladiXp" FontSize="40"/>
         </StackPanel>
-        <Image x:Name="GladiImage" Grid.Column="1" HorizontalAlignment="Left" Height="215" Margin="10,225,0,0" VerticalAlignment="Top" Width="380"/>
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="210" Margin="10,10,0,0" VerticalAlignment="Top" Width="265"/>
+        <TextBlock x:Name="CoinTxt" Grid.Column="1" HorizontalAlignment="Left" Margin="15,255,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="180" Width="370">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.181"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
 
 
 

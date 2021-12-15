@@ -105,6 +105,8 @@ namespace gladiaddi
                 BitmapImage bitmapImage = new BitmapImage(new Uri(bitmapPath + "won.png", UriKind.Absolute));
                 ResultImg.Source = bitmapImage;
                 GladiPlayer.Wins += 1;
+                GladiPlayer.Coins += 1;
+
             }
 
             GladiPlayer.Stamina = stamina_save;

@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Training">
 
-    <Grid>
+    <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -16,16 +16,27 @@
         </Grid.ColumnDefinitions>
         <StackPanel HorizontalAlignment="Left" Height="430" Margin="10,10,0,0" VerticalAlignment="Top" Width="247">
             <Label Content="Name:" Margin="0,0,9.857,0"/>
-            <TextBlock x:Name="GladíName" FontSize="40" Margin="0,0,9.857,0" />
-            <Label Content="Stamina:" Margin="0,0,9.857,0"/>
+            <TextBlock x:Name="GladiName" FontSize="40" Margin="0,0,9.857,0" />
+            <Label Content="Ausdauer" Margin="0,0,9.857,0"/>
             <TextBlock x:Name="GladiStamina" FontSize="40" Margin="0,0,9.857,0"/>
-            <Label Content="Attack:" Margin="0,0,9.857,0"/>
+            <Label Content="Angriff:" Margin="0,0,9.857,0"/>
             <TextBlock x:Name="GladiAttack" FontSize="40" Margin="0,0,9.857,0"/>
-            <Label Content="Defense:" Margin="0,0,9.857,0"/>
+            <Label Content="Verteidigung" Margin="0,0,9.857,0"/>
             <TextBlock x:Name="GladiDefense" FontSize="40" Margin="0,0,9.857,0"/>
-            <Label Content="Level:" Margin="0,0,9.857,0"/>
-            <TextBlock x:Name="GladiLevel" FontSize="40" Margin="0,0,9.857,0"/>
-            <Label Content="XP:" Margin="0,0,9.857,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="430" Margin="10,10,0,0" VerticalAlignment="Top" Width="247">
+            <TextBlock x:Name="CoinTxt" Height="80" />
+            <Button x:Name="StaminaTrain" Content="Push Ausdauer!" Height="70" Click="TrainStamina"/>
+            <Button x:Name="AttackTrain" Content="Push Angriff !" Height="75"/>
+            <Button x:Name="DefenseTrain" Content="Push Defense !" Height="80"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" HorizontalAlignment="Left" Height="430" Margin="10,10,0,0" VerticalAlignment="Top" Width="246">
+            <TextBox Height="80" TextWrapping="Wrap"/>
+            <TextBox x:Name="ResultStamina" Height="70" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name="ResultAttack" Height="75" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name="ResultDefense" Height="80" TextWrapping="Wrap" Text="TextBox"/>
+            <Button x:Name="SaveBtn" Content="Speichern" Height="95" Click="OnClickSave"/>
         </StackPanel>
     </Grid>
 </Page>

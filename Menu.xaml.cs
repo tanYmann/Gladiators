@@ -33,7 +33,7 @@ namespace gladiaddi
         {      
            
             InitializeComponent();
-            GladíName.Text = gladiator.Name;
+            GladiName.Text = gladiator.Name;
             GladiStamina.Text = gladiator.Stamina.ToString();
             GladiAttack.Text = gladiator.Attack.ToString();
             GladiDefense.Text = gladiator.Defense.ToString();
@@ -41,6 +41,7 @@ namespace gladiaddi
             GladiXp.Text = gladiator.Xp.ToString();
             Gladi = gladiator;
             Gladi.Level = SetLevel(gladiator);
+            CoinTxt.Text = gladiator.Coins.ToString();
           
         }
         public int SetLevel(Gladiator gladiator)

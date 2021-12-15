@@ -42,36 +42,39 @@ namespace gladiaddi
            {
                 case "MerkurMagicRadio":
 
-                    this.gladiatorPlayer.Name = "MerkurMagic";
+                    this.gladiatorPlayer.Name = "GladiBoy";
                     gladiatorPlayer.Stamina = 100;
-                    gladiatorPlayer.Attack = 8;
-                    gladiatorPlayer.Defense = 6;
+                    gladiatorPlayer.Attack = 11;
+                    gladiatorPlayer.Defense = 3;
                     this.gladiatorPlayer.ImgUrl = "GladiFace002.png";
                     gladiatorPlayer.Level = 1;
                     gladiatorPlayer.Xp = 0;
+                    gladiatorPlayer.Coins = 0;
 
                     break;
 
                 case "GladiBoyRadio":
 
-                    this.gladiatorPlayer.Name = "GladiBoy";
-                    gladiatorPlayer.Stamina = 100;
+                    this.gladiatorPlayer.Name = "MerkurMagic";
+                    gladiatorPlayer.Stamina = 120;
                     gladiatorPlayer.Attack = 8;
-                    gladiatorPlayer.Defense = 6;
+                    gladiatorPlayer.Defense = 8;
                     this.gladiatorPlayer.ImgUrl = "GladiFace001.png";
                     gladiatorPlayer.Level = 1;
                     gladiatorPlayer.Xp = 0;
+                    gladiatorPlayer.Coins = 0;
                     break;
 
                 case "BasherRadio":
 
                     this.gladiatorPlayer.Name = "Basher";
-                    gladiatorPlayer.Stamina = 100;
-                    gladiatorPlayer.Attack = 8;
-                    gladiatorPlayer.Defense = 6;
-                    this.gladiatorPlayer.ImgUrl = "GladiFace001.png";
+                    gladiatorPlayer.Stamina = 85;
+                    gladiatorPlayer.Attack = 12;
+                    gladiatorPlayer.Defense = 10;
+                    this.gladiatorPlayer.ImgUrl = "GladiFace003.png";
                     gladiatorPlayer.Level = 1;
                     gladiatorPlayer.Xp = 0;
+                    gladiatorPlayer.Coins = 0;
                     break;
             }
 

@@ -21,7 +21,7 @@ namespace gladiaddi
         public int Fights { get; set; }
         public int Wins { get; set; }
         public DateTime StartDate { get; set; }
-
+        public int Coins { get; set; }
         public static void SetGladiator(Gladiator gladiator)
         {
            
