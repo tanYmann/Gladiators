@@ -65,36 +65,45 @@ namespace gladiaddi
             
             while(attacker.Stamina>0 && defender.Stamina>0)
             {
+                CountdownEvent countdown = new CountdownEvent(100);
                 Random dice = new Random();
                 schaden = (attacker.Attack  * dice.Next(1,6)) - (defender.Defense * dice.Next(1, 6));
                 if(schaden <= 0)
                 {
                     schaden = schaden / -5;
                 }
+                kampfLog.Text = "Treffer! " + schaden.ToString() + " Schaden.";
                 defender.Stamina -= schaden;
-   
+                StaminaPlayer.Text = defender.Stamina.ToString();
+               
+
                 schaden = (defender.Attack * dice.Next(1,6)) - (attacker.Defense * dice.Next(1, 6));
                 if (schaden <= 0)
                 {
                     schaden = schaden / -5;
                 }
                 attacker.Stamina -= schaden;
+                kampfLog.Text = "Treffer! " + schaden.ToString() + " Schaden.";
+                StaminaPlayer.Text = attacker.Stamina.ToString();
+                
+
             }
             
             GladiPlayer.Fights += 1;
             if(attacker.Stamina<=0 && attacker.Name == gladiPlayer.Name)
             { 
-                GladiPlayer.Xp += 10; 
-                ResultTxt.Background = Brushes.Red;
-                ResultTxt.Foreground = Brushes.White;
-                ResultTxt.Text = "Lost";
+                GladiPlayer.Xp += 10;
+                string bitmapPath = @"C:\Users\tanzm\source\repos\gladiaddi\images\";
+                BitmapImage bitmapImage = new BitmapImage(new Uri(bitmapPath + "Lost.png", UriKind.Absolute));
+                ResultImg.Source = bitmapImage;
+             
             }
             else
             {
                 GladiPlayer.Xp += 100;
-                ResultTxt.Background = Brushes.Green;
-                ResultTxt.Foreground = Brushes.White;
-                ResultTxt.Text = "Won";
+                string bitmapPath = @"C:\Users\tanzm\source\repos\gladiaddi\images\";
+                BitmapImage bitmapImage = new BitmapImage(new Uri(bitmapPath + "won.png", UriKind.Absolute));
+                ResultImg.Source = bitmapImage;
                 GladiPlayer.Wins += 1;
             }
 

@@ -70,5 +70,10 @@ namespace gladiaddi
         {
             NavigationService.Navigate(new Page1(Gladi));
         }
+
+        private void OnClickTrain(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Training(Gladi));
+        }
     }
 }

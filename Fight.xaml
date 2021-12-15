@@ -8,15 +8,16 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Fight">
 
-    <Grid Margin="0,0,0,0.286">
-        <Button x:Name="FightBtn" Content="FIGHT !&#xD;&#xA;" HorizontalAlignment="Left" Margin="40,34,0,0" VerticalAlignment="Top" Width="75" Click="OnClickStart"/>
+    <Grid RenderTransformOrigin="0.494,0.489" Margin="0,0,0,-129.714">
+        <Button x:Name="FightBtn" Content="FIGHT !&#xD;&#xA;" Margin="40,34,0,0" Click="OnClickStart" HorizontalAlignment="Left" Width="75" Height="37" VerticalAlignment="Top" />
         <Button x:Name="EndBtn" Content="Beenden" HorizontalAlignment="Left" Margin="40,71,0,0" VerticalAlignment="Top" Width="75" Click="EndBtn_Click"/>
         <TextBlock x:Name="OpponentTxt" HorizontalAlignment="Left" Margin="135,10,0,0" TextWrapping="Wrap" Text="Opponent" VerticalAlignment="Top" Background="White" Height="82" Width="205"/>
 
-        <TextBlock x:Name="ResultTxt" HorizontalAlignment="Left" Margin="365,290,0,0" TextWrapping="Wrap" Text="Result" VerticalAlignment="Top" Height="56" Width="395" Background="White"/>
+        <Image x:Name="ResultImg" HorizontalAlignment="Left" Margin="365,290,0,0" VerticalAlignment="Top" Height="56" Width="395" />
         <TextBlock x:Name="GladiPlayerTxt" HorizontalAlignment="Left" Margin="10,195,0,0" TextWrapping="Wrap" Text="Eigener Kämpfer" VerticalAlignment="Top" Height="151" Width="330" Background="White"/>
-        <TextBlock x:Name="StaminaPlayer" HorizontalAlignment="Left" Margin="405,34,0,0" TextWrapping="Wrap" Text="StaminaPlayer" VerticalAlignment="Top" Height="116" Width="145" Background="White"/>
+        <TextBlock x:Name="StaminaPlayer" Margin="405,34,250,0" TextWrapping="Wrap" Text="StaminaPlayer" VerticalAlignment="Top" Height="116" Background="White"/>
         <TextBlock x:Name="StaminaOpponwnt" HorizontalAlignment="Left" Height="115" Margin="595,35,0,0" TextWrapping="Wrap" Text="StaminaOpponent" VerticalAlignment="Top" Width="145" Background="White"/>
+        <TextBlock x:Name="kampfLog" HorizontalAlignment="Left" Margin="365,165,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="106" Width="395" Background="White"/>
 
     </Grid>
 </Page>

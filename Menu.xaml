@@ -14,7 +14,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="1" Margin="10,10,10,230">
-            <Button x:Name="trainBtn" Width="80" Height="30">Trainieren</Button>
+            <Button x:Name="trainBtn" Width="80" Height="30" Click="OnClickTrain">Trainieren</Button>
             <Button x:Name="fightBtn" Width="80" Height="30" Click="OnFightBtnClick">Kämpfen</Button>
             <Button x:Name="statBtn" Width="80" Height="30" Click="OnClickStatBtn">Statistik</Button>
             <Button x:Name="menuBtn" Width="80" Height="30">Menü</Button>

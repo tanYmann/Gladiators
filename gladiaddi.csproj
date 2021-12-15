@@ -190,6 +190,11 @@
   <ItemGroup>
     <Resource Include="Images\GladiFace003.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Lost.png" />
+    <Resource Include="Title.PNG" />
+    <Resource Include="won.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
