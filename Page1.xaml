@@ -30,6 +30,7 @@
             <TextBlock x:Name="SiegTxt" FontSize="25" TextWrapping="Wrap" Text="SiegTxt" Height="55" Margin="0,0,-1.143,0" Foreground="#FF31FF00" HorizontalAlignment="Center"/>
             <TextBlock TextWrapping="Wrap" FontSize="15" Height="55" Margin="0,0,-1.143,0" Text="Durchschnittliche Punkte pro Kampf: "/>
             <TextBlock x:Name="PkteTxt" TextWrapping="Wrap" Height="55" Margin="0,0,-1.143,0"/>
+            <Button x:Name="BackButton" Content="Zurück" Height="60" Click="OnClickBack"/>
             <TextBlock FontSize="25" HorizontalAlignment="Center" TextWrapping="Wrap" Height="55" Margin="0,0,-1.143,0"/>
         </StackPanel>
         <Image Grid.Column="1" Margin="10.143,0,9.714,0" Source="twoGladsPNG.PNG" Height="425" VerticalAlignment="Top"/>

@@ -10,15 +10,19 @@
     d:DesignWidth="800"
     mc:Ignorable="d">
 
-    <Grid Background="White">
+    <Grid Margin="0,0,-482,-429.714">
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/background__start.png"/>
+        </Grid.Background>
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock HorizontalAlignment="Center">Willkomen bei Gladiators</TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontFamily="MingLiU_HKSCS-ExtB" Foreground="#FFFF0007" FontSize="35" FontWeight="Bold">Willkomen bei Gladiators</TextBlock>
             <Rectangle Height="80"/>
-            <Button x:Name="StartBtn" Click="OnClickStart" Width="167" RenderTransformOrigin="0.431,2.792" Height="59" >
+            <Button x:Name="StartBtn" Click="OnClickStart" Width="167" RenderTransformOrigin="0.431,2.792" Height="172" >
                 <Button.Background>
-                    <ImageBrush ImageSource="start.png"/>
-                </Button.Background> 
+                    <ImageBrush ImageSource="Images/start.png"/>
+                </Button.Background>
+
             </Button>
             <Grid Height="100" >
                 <Grid.ColumnDefinitions>

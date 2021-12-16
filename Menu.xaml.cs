@@ -42,7 +42,10 @@ namespace gladiaddi
             Gladi = gladiator;
             Gladi.Level = SetLevel(gladiator);
             CoinTxt.Text = gladiator.Coins.ToString();
-          
+            string bitmapPath = @"C:\Users\tanzm\source\repos\gladiaddi\Images\";
+            BitmapImage bitmapImage = new BitmapImage(new Uri(bitmapPath + gladiator.ImgUrl, UriKind.Absolute));
+            GladiImg.Source = bitmapImage;
+
         }
         public int SetLevel(Gladiator gladiator)
         {
@@ -75,6 +78,11 @@ namespace gladiaddi
         private void OnClickTrain(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Training(Gladi));
+        }
+
+        private void OnClickMenu(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Page2(Gladi));
         }
     }
 }

@@ -20,8 +20,10 @@ namespace gladiaddi
     /// </summary>
     public partial class Page1 : Page
     {
+        public Gladiator Gladi = new Gladiator();
         public Page1(Gladiator gladiator)
         {
+            Gladi = gladiator;
             InitializeComponent();
             KmpfTxt.Text = gladiator.Fights.ToString();
             SiegTxt.Text = gladiator.Wins.ToString();
@@ -33,6 +35,9 @@ namespace gladiaddi
             
         }
 
-      
+        private void OnClickBack(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Menu(Gladi));
+        }
     }
 }

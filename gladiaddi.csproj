@@ -47,11 +47,19 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="LinqKit, Version=1.1.27.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
+      <HintPath>packages\LinqKit.1.1.27\lib\net45\LinqKit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Drawing.Common.6.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,6 +79,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Page2.xaml.cs">
+      <DependentUpon>Page2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Training.xaml.cs">
       <DependentUpon>Training.xaml</DependentUpon>
     </Compile>
@@ -104,6 +115,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -183,7 +198,9 @@
     <Resource Include="GladiFace003.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="start.png" />
+    <Resource Include="Images\pushAttack.png" />
+    <Resource Include="Images\pushDefense.png" />
+    <Resource Include="Images\pushStamina.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="twoGladsPNG.PNG" />
@@ -201,6 +218,43 @@
     <Resource Include="Lost.png" />
     <Resource Include="Title.PNG" />
     <Resource Include="won.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Attack.png" />
+    <Resource Include="Images\coins.png" />
+    <Resource Include="Images\Defense.png" />
+    <Resource Include="Images\level.png" />
+    <Resource Include="Images\Name.png" />
+    <Resource Include="Images\Stamina.png" />
+    <Resource Include="Images\Title.PNG" />
+    <Resource Include="Images\xp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\coins_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ZIGZAG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SaveSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pergament.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\backbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NewTitle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="background__start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\background__start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\start.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
