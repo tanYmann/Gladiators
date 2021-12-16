@@ -88,5 +88,10 @@ namespace gladiaddi
         {
             NavigationService.Navigate(new Page2(Gladi));
         }
+
+        private void OnClickBacK(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Menu(Gladi));
+        }
     }
 }

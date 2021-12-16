@@ -23,7 +23,7 @@
             </StackPanel.Background>
             <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Name.png" Height="35" Margin="0,0,-0.143,0"></Image>
             <TextBlock x:Name="GladiName" FontSize="40" Margin="0,0,-0.143,0" Background="White" OpacityMask="White" Opacity="0.65" TextAlignment="Center"/>
-            <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Stamina.png" Height="35"></Image>
+            <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Stamina_neu.png" Height="35"></Image>
             <TextBlock x:Name="GladiStamina" FontSize="40" Margin="0,0,-0.143,0" Opacity="0.72" Foreground="Black" OpacityMask="White" Background="White" TextAlignment="Center"/>
             <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Attack.png" Height="35"></Image>
             <TextBlock x:Name="GladiAttack" FontSize="40" Margin="0,0,-0.143,0" Background="White" Opacity="0.65" TextAlignment="Center"/>
@@ -62,11 +62,12 @@
             <StackPanel.Background>
                 <ImageBrush ImageSource="Images/ZIGZAG.png"/>
             </StackPanel.Background>
-            <TextBox Height="120" TextWrapping="Wrap" Background="{x:Null}" Margin="0,0,-0.286,0"/>
+            <TextBox Height="81" TextWrapping="Wrap" Background="{x:Null}" Margin="0,0,-0.286,0"/>
+            <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Stamina_neu.png" Height="35"></Image>
             <TextBox x:Name="ResultStamina" Height="55" TextWrapping="Wrap" Text="TextBox" Margin="0,0,-0.286,0"  Opacity="0.65" FontSize="36" TextAlignment="Center"/>
-            <Rectangle HorizontalAlignment="Left" Height="35" Margin="48,0,0,0" Stroke="Black" Width="135"/>
+            <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Attack.png" Height="35"></Image>
             <TextBox x:Name="ResultAttack" Height="50" TextWrapping="Wrap" Text="TextBox" Margin="0,0,-0.286,0" Opacity="0.65" FontSize="36" TextAlignment="Center"/>
-            <Rectangle HorizontalAlignment="Left" Height="35" Margin="48,0,0,0" Stroke="Black" Width="135"/>
+            <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Defense.png" Height="35"></Image>
             <TextBox x:Name="ResultDefense" Height="59" TextWrapping="Wrap" Text="TextBox" Margin="0,0,-0.286,0" Opacity="0.65" FontSize="36" TextAlignment="Center"/>
             <Rectangle HorizontalAlignment="Left" Height="7" Margin="48,0,0,0" Stroke="Black" Width="135"/>
             <Button x:Name="SaveBtn" Height="52" Click="OnClickSave" Margin="91,0,82.714,0" FontSize="35" FontFamily="Minerva">

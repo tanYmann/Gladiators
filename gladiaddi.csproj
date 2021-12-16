@@ -79,6 +79,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Connector.cs" />
     <Compile Include="Page2.xaml.cs">
       <DependentUpon>Page2.xaml</DependentUpon>
     </Compile>
@@ -94,14 +95,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Gladiator.cs" />
-    <Compile Include="Gladiators.cs">
-      <DependentUpon>Gladiators.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Gladiators.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Gladiators.xsd</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -168,17 +161,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Gladiators.xsc">
-      <DependentUpon>Gladiators.xsd</DependentUpon>
-    </None>
-    <None Include="Gladiators.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Gladiators.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Gladiators.xss">
-      <DependentUpon>Gladiators.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -203,6 +185,7 @@
     <Resource Include="Images\pushStamina.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\Stamina.png" />
     <Resource Include="twoGladsPNG.PNG" />
   </ItemGroup>
   <ItemGroup>
@@ -220,14 +203,7 @@
     <Resource Include="won.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Attack.png" />
-    <Resource Include="Images\coins.png" />
-    <Resource Include="Images\Defense.png" />
-    <Resource Include="Images\level.png" />
-    <Resource Include="Images\Name.png" />
-    <Resource Include="Images\Stamina.png" />
     <Resource Include="Images\Title.PNG" />
-    <Resource Include="Images\xp.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\coins_background.png" />
@@ -258,6 +234,28 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\back#.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu.png" />
+    <Resource Include="Images\stats.png" />
+    <Resource Include="Images\Training.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Attack.png" />
+    <Resource Include="Images\Coins#.png" />
+    <Resource Include="Images\Defense.png" />
+    <Resource Include="Images\Level.png" />
+    <Resource Include="Images\Name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\stamina_neu.png" />
+    <Resource Include="Images\Xp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Fight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Fight_new.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

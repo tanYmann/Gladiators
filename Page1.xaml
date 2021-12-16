@@ -18,19 +18,14 @@
         <StackPanel Background="#FF6F1515" Grid.ColumnSpan="2" Margin="10,10,266.714,10.286">
             <Rectangle Height="56" Margin="0,0,0.143,0"/>
             <TextBlock TextWrapping="Wrap"  Text="Kämpfe insgesamt" Height="55" FontSize="20" TextAlignment="Center"/>
-            <TextBlock x:Name="KmpfTxt" FontSize="25" TextWrapping="Wrap" Height="35" Margin="79,0,77.857,0" HorizontalAlignment="Center">
-                <TextBlock.Foreground>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="White" Offset="1"/>
-                        <GradientStop Color="Red"/>
-                        <GradientStop Color="#FFFF3E3E" Offset="0.656"/>
-                    </LinearGradientBrush>
-                </TextBlock.Foreground><Run Background="#FF781B1B" Text="KmpfTxt"/></TextBlock>
+            <TextBlock x:Name="KmpfTxt" FontSize="25" TextWrapping="Wrap" Height="35" Margin="79,0,77.857,0" HorizontalAlignment="Center" Foreground="Gold"/>
+
+
+
             <TextBlock TextWrapping="Wrap" FontSize="20" TextAlignment="Center" Text="Siegreiche Kämpfe;" Height="55"/>
-            <TextBlock x:Name="SiegTxt" FontSize="25" TextWrapping="Wrap" Text="SiegTxt" Height="55"  Foreground="#FF31FF00" HorizontalAlignment="Center"/>
+            <TextBlock x:Name="SiegTxt" FontSize="25" TextWrapping="Wrap" Text="SiegTxt" Height="55"  Foreground="Gold" HorizontalAlignment="Center"/>
             <TextBlock TextWrapping="Wrap" FontSize="20" TextAlignment="Center" Height="55" Text="Durchschnittliche Punkte pro Kampf: "/>
-            <TextBlock x:Name="PkteTxt" TextWrapping="Wrap" Height="55" Margin="0,0,-1.143,0"/>
+            <TextBlock x:Name="PkteTxt" TextWrapping="Wrap" Height="55" Margin="0,0,-1.143,0" Foreground="Gold"/>
 
             <TextBlock FontSize="25" HorizontalAlignment="Center" TextWrapping="Wrap" Height="55" />
         </StackPanel>
@@ -40,9 +35,9 @@
             <Image Grid.Column="1"  Source="twoGladsPNG.PNG" Height="223" VerticalAlignment="Top" Margin="0,0,-0.143,0"/>
 
             <Rectangle Height="52"/>
-            <Button Content="" Height="62" Margin="0,0,73.857,0" HorizontalAlignment="Right" Width="120" Click="OnClickBack">
+            <Button Content="" Height="62" Margin="0,0,86.857,0" HorizontalAlignment="Right" Width="86" Click="OnClickBack">
                 <Button.Background>
-                    <ImageBrush ImageSource="Images/back#.png"/>
+                    <ImageBrush ImageSource="C:\Users\tanzm\source\repos\gladiaddi\Images\back#.png"/>
                 </Button.Background>
             </Button>
         </StackPanel>
