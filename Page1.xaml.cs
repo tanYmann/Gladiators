@@ -29,8 +29,12 @@ namespace gladiaddi
             SiegTxt.Text = gladiator.Wins.ToString();
             PkteTxt.Text = (gladiator.Xp / gladiator.Fights).ToString();
             playerName.Text = gladiator.Name;
-            string bitmapPath = @"C:\Users\tanzm\source\repos\gladiaddi\";
+            string bitmapPath = @"C:\Users\tanzm\source\repos\gladiaddi\Images\";
             BitmapImage bitmapImage = new BitmapImage(new Uri(bitmapPath+gladiator.ImgUrl, UriKind.Absolute));
+            if (bitmapImage == null)
+            {
+                bitmapImage = new BitmapImage(new Uri(bitmapPath + "GladiFace001.png"));
+            }
             playerImage.Source = bitmapImage;
             
         }

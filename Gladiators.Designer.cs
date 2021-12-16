@@ -24,7 +24,7 @@ namespace gladiaddi {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class Gladiators : global::System.Data.DataSet {
         
-        private GladiatorenDataTable tableGladiatoren;
+        private DataTable1DataTable tableDataTable1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace gladiaddi {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Gladiatoren"] != null)) {
-                    base.Tables.Add(new GladiatorenDataTable(ds.Tables["Gladiatoren"]));
+                if ((ds.Tables["DataTable1"] != null)) {
+                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace gladiaddi {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public GladiatorenDataTable Gladiatoren {
+        public DataTable1DataTable DataTable1 {
             get {
-                return this.tableGladiatoren;
+                return this.tableDataTable1;
             }
         }
         
@@ -152,8 +152,8 @@ namespace gladiaddi {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Gladiatoren"] != null)) {
-                    base.Tables.Add(new GladiatorenDataTable(ds.Tables["Gladiatoren"]));
+                if ((ds.Tables["DataTable1"] != null)) {
+                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace gladiaddi {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableGladiatoren = ((GladiatorenDataTable)(base.Tables["Gladiatoren"]));
+            this.tableDataTable1 = ((DataTable1DataTable)(base.Tables["DataTable1"]));
             if ((initTable == true)) {
-                if ((this.tableGladiatoren != null)) {
-                    this.tableGladiatoren.InitVars();
+                if ((this.tableDataTable1 != null)) {
+                    this.tableDataTable1.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace gladiaddi {
             this.Namespace = "http://tempuri.org/Gladiators.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableGladiatoren = new GladiatorenDataTable();
-            base.Tables.Add(this.tableGladiatoren);
+            this.tableDataTable1 = new DataTable1DataTable();
+            base.Tables.Add(this.tableDataTable1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeGladiatoren() {
+        private bool ShouldSerializeDataTable1() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace gladiaddi {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void GladiatorenRowChangeEventHandler(object sender, GladiatorenRowChangeEvent e);
+        public delegate void DataTable1RowChangeEventHandler(object sender, DataTable1RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class GladiatorenDataTable : global::System.Data.TypedTableBase<GladiatorenRow> {
+        public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
             private global::System.Data.DataColumn columnName;
             
@@ -293,16 +293,10 @@ namespace gladiaddi {
             
             private global::System.Data.DataColumn columnXp;
             
-            private global::System.Data.DataColumn columnKämpfe;
-            
-            private global::System.Data.DataColumn columnSiege;
-            
-            private global::System.Data.DataColumn columnStartdatum;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GladiatorenDataTable() {
-                this.TableName = "Gladiatoren";
+            public DataTable1DataTable() {
+                this.TableName = "DataTable1";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -310,7 +304,7 @@ namespace gladiaddi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal GladiatorenDataTable(global::System.Data.DataTable table) {
+            internal DataTable1DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -327,7 +321,7 @@ namespace gladiaddi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected GladiatorenDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DataTable1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -390,30 +384,6 @@ namespace gladiaddi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn KämpfeColumn {
-                get {
-                    return this.columnKämpfe;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn SiegeColumn {
-                get {
-                    return this.columnSiege;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn StartdatumColumn {
-                get {
-                    return this.columnStartdatum;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -423,34 +393,34 @@ namespace gladiaddi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GladiatorenRow this[int index] {
+            public DataTable1Row this[int index] {
                 get {
-                    return ((GladiatorenRow)(this.Rows[index]));
+                    return ((DataTable1Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event GladiatorenRowChangeEventHandler GladiatorenRowChanging;
+            public event DataTable1RowChangeEventHandler DataTable1RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event GladiatorenRowChangeEventHandler GladiatorenRowChanged;
+            public event DataTable1RowChangeEventHandler DataTable1RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event GladiatorenRowChangeEventHandler GladiatorenRowDeleting;
+            public event DataTable1RowChangeEventHandler DataTable1RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event GladiatorenRowChangeEventHandler GladiatorenRowDeleted;
+            public event DataTable1RowChangeEventHandler DataTable1RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddGladiatorenRow(GladiatorenRow row) {
+            public void AddDataTable1Row(DataTable1Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GladiatorenRow AddGladiatorenRow(string Name, string ImgUrl, string Stamina, string Attack, string Defense, string Level, string Xp, string Kämpfe, string Siege, string Startdatum) {
-                GladiatorenRow rowGladiatorenRow = ((GladiatorenRow)(this.NewRow()));
+            public DataTable1Row AddDataTable1Row(string Name, string ImgUrl, string Stamina, string Attack, string Defense, string Level, string Xp) {
+                DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Name,
                         ImgUrl,
@@ -458,19 +428,16 @@ namespace gladiaddi {
                         Attack,
                         Defense,
                         Level,
-                        Xp,
-                        Kämpfe,
-                        Siege,
-                        Startdatum};
-                rowGladiatorenRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowGladiatorenRow);
-                return rowGladiatorenRow;
+                        Xp};
+                rowDataTable1Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDataTable1Row);
+                return rowDataTable1Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                GladiatorenDataTable cln = ((GladiatorenDataTable)(base.Clone()));
+                DataTable1DataTable cln = ((DataTable1DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -478,7 +445,7 @@ namespace gladiaddi {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new GladiatorenDataTable();
+                return new DataTable1DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -491,9 +458,6 @@ namespace gladiaddi {
                 this.columnDefense = base.Columns["Defense"];
                 this.columnLevel = base.Columns["Level"];
                 this.columnXp = base.Columns["Xp"];
-                this.columnKämpfe = base.Columns["Kämpfe"];
-                this.columnSiege = base.Columns["Siege"];
-                this.columnStartdatum = base.Columns["Startdatum"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -513,39 +477,33 @@ namespace gladiaddi {
                 base.Columns.Add(this.columnLevel);
                 this.columnXp = new global::System.Data.DataColumn("Xp", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnXp);
-                this.columnKämpfe = new global::System.Data.DataColumn("Kämpfe", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKämpfe);
-                this.columnSiege = new global::System.Data.DataColumn("Siege", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSiege);
-                this.columnStartdatum = new global::System.Data.DataColumn("Startdatum", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStartdatum);
                 this.columnStamina.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GladiatorenRow NewGladiatorenRow() {
-                return ((GladiatorenRow)(this.NewRow()));
+            public DataTable1Row NewDataTable1Row() {
+                return ((DataTable1Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new GladiatorenRow(builder);
+                return new DataTable1Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(GladiatorenRow);
+                return typeof(DataTable1Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.GladiatorenRowChanged != null)) {
-                    this.GladiatorenRowChanged(this, new GladiatorenRowChangeEvent(((GladiatorenRow)(e.Row)), e.Action));
+                if ((this.DataTable1RowChanged != null)) {
+                    this.DataTable1RowChanged(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -553,8 +511,8 @@ namespace gladiaddi {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.GladiatorenRowChanging != null)) {
-                    this.GladiatorenRowChanging(this, new GladiatorenRowChangeEvent(((GladiatorenRow)(e.Row)), e.Action));
+                if ((this.DataTable1RowChanging != null)) {
+                    this.DataTable1RowChanging(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -562,8 +520,8 @@ namespace gladiaddi {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.GladiatorenRowDeleted != null)) {
-                    this.GladiatorenRowDeleted(this, new GladiatorenRowChangeEvent(((GladiatorenRow)(e.Row)), e.Action));
+                if ((this.DataTable1RowDeleted != null)) {
+                    this.DataTable1RowDeleted(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -571,14 +529,14 @@ namespace gladiaddi {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.GladiatorenRowDeleting != null)) {
-                    this.GladiatorenRowDeleting(this, new GladiatorenRowChangeEvent(((GladiatorenRow)(e.Row)), e.Action));
+                if ((this.DataTable1RowDeleting != null)) {
+                    this.DataTable1RowDeleting(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveGladiatorenRow(GladiatorenRow row) {
+            public void RemoveDataTable1Row(DataTable1Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -605,7 +563,7 @@ namespace gladiaddi {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "GladiatorenDataTable";
+                attribute2.FixedValue = "DataTable1DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -649,15 +607,15 @@ namespace gladiaddi {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class GladiatorenRow : global::System.Data.DataRow {
+        public partial class DataTable1Row : global::System.Data.DataRow {
             
-            private GladiatorenDataTable tableGladiatoren;
+            private DataTable1DataTable tableDataTable1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal GladiatorenRow(global::System.Data.DataRowBuilder rb) : 
+            internal DataTable1Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableGladiatoren = ((GladiatorenDataTable)(this.Table));
+                this.tableDataTable1 = ((DataTable1DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -665,14 +623,14 @@ namespace gladiaddi {
             public string Name {
                 get {
                     try {
-                        return ((string)(this[this.tableGladiatoren.NameColumn]));
+                        return ((string)(this[this.tableDataTable1.NameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Name in Tabelle Gladiatoren ist DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Name in Tabelle DataTable1 ist DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGladiatoren.NameColumn] = value;
+                    this[this.tableDataTable1.NameColumn] = value;
                 }
             }
             
@@ -681,14 +639,14 @@ namespace gladiaddi {
             public string ImgUrl {
                 get {
                     try {
-                        return ((string)(this[this.tableGladiatoren.ImgUrlColumn]));
+                        return ((string)(this[this.tableDataTable1.ImgUrlColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ImgUrl in Tabelle Gladiatoren ist DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ImgUrl in Tabelle DataTable1 ist DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGladiatoren.ImgUrlColumn] = value;
+                    this[this.tableDataTable1.ImgUrlColumn] = value;
                 }
             }
             
@@ -696,10 +654,10 @@ namespace gladiaddi {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Stamina {
                 get {
-                    return ((string)(this[this.tableGladiatoren.StaminaColumn]));
+                    return ((string)(this[this.tableDataTable1.StaminaColumn]));
                 }
                 set {
-                    this[this.tableGladiatoren.StaminaColumn] = value;
+                    this[this.tableDataTable1.StaminaColumn] = value;
                 }
             }
             
@@ -708,14 +666,14 @@ namespace gladiaddi {
             public string Attack {
                 get {
                     try {
-                        return ((string)(this[this.tableGladiatoren.AttackColumn]));
+                        return ((string)(this[this.tableDataTable1.AttackColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Attack in Tabelle Gladiatoren ist DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Attack in Tabelle DataTable1 ist DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGladiatoren.AttackColumn] = value;
+                    this[this.tableDataTable1.AttackColumn] = value;
                 }
             }
             
@@ -724,14 +682,14 @@ namespace gladiaddi {
             public string Defense {
                 get {
                     try {
-                        return ((string)(this[this.tableGladiatoren.DefenseColumn]));
+                        return ((string)(this[this.tableDataTable1.DefenseColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Defense in Tabelle Gladiatoren ist DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Defense in Tabelle DataTable1 ist DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGladiatoren.DefenseColumn] = value;
+                    this[this.tableDataTable1.DefenseColumn] = value;
                 }
             }
             
@@ -740,14 +698,14 @@ namespace gladiaddi {
             public string Level {
                 get {
                     try {
-                        return ((string)(this[this.tableGladiatoren.LevelColumn]));
+                        return ((string)(this[this.tableDataTable1.LevelColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Level in Tabelle Gladiatoren ist DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Level in Tabelle DataTable1 ist DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGladiatoren.LevelColumn] = value;
+                    this[this.tableDataTable1.LevelColumn] = value;
                 }
             }
             
@@ -756,171 +714,87 @@ namespace gladiaddi {
             public string Xp {
                 get {
                     try {
-                        return ((string)(this[this.tableGladiatoren.XpColumn]));
+                        return ((string)(this[this.tableDataTable1.XpColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Xp in Tabelle Gladiatoren ist DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Xp in Tabelle DataTable1 ist DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGladiatoren.XpColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Kämpfe {
-                get {
-                    try {
-                        return ((string)(this[this.tableGladiatoren.KämpfeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Kämpfe in Tabelle Gladiatoren ist DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGladiatoren.KämpfeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Siege {
-                get {
-                    try {
-                        return ((string)(this[this.tableGladiatoren.SiegeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Siege in Tabelle Gladiatoren ist DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGladiatoren.SiegeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Startdatum {
-                get {
-                    try {
-                        return ((string)(this[this.tableGladiatoren.StartdatumColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Startdatum in Tabelle Gladiatoren ist DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGladiatoren.StartdatumColumn] = value;
+                    this[this.tableDataTable1.XpColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsNameNull() {
-                return this.IsNull(this.tableGladiatoren.NameColumn);
+                return this.IsNull(this.tableDataTable1.NameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetNameNull() {
-                this[this.tableGladiatoren.NameColumn] = global::System.Convert.DBNull;
+                this[this.tableDataTable1.NameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsImgUrlNull() {
-                return this.IsNull(this.tableGladiatoren.ImgUrlColumn);
+                return this.IsNull(this.tableDataTable1.ImgUrlColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetImgUrlNull() {
-                this[this.tableGladiatoren.ImgUrlColumn] = global::System.Convert.DBNull;
+                this[this.tableDataTable1.ImgUrlColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsAttackNull() {
-                return this.IsNull(this.tableGladiatoren.AttackColumn);
+                return this.IsNull(this.tableDataTable1.AttackColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetAttackNull() {
-                this[this.tableGladiatoren.AttackColumn] = global::System.Convert.DBNull;
+                this[this.tableDataTable1.AttackColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsDefenseNull() {
-                return this.IsNull(this.tableGladiatoren.DefenseColumn);
+                return this.IsNull(this.tableDataTable1.DefenseColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDefenseNull() {
-                this[this.tableGladiatoren.DefenseColumn] = global::System.Convert.DBNull;
+                this[this.tableDataTable1.DefenseColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsLevelNull() {
-                return this.IsNull(this.tableGladiatoren.LevelColumn);
+                return this.IsNull(this.tableDataTable1.LevelColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetLevelNull() {
-                this[this.tableGladiatoren.LevelColumn] = global::System.Convert.DBNull;
+                this[this.tableDataTable1.LevelColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsXpNull() {
-                return this.IsNull(this.tableGladiatoren.XpColumn);
+                return this.IsNull(this.tableDataTable1.XpColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetXpNull() {
-                this[this.tableGladiatoren.XpColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsKämpfeNull() {
-                return this.IsNull(this.tableGladiatoren.KämpfeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetKämpfeNull() {
-                this[this.tableGladiatoren.KämpfeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsSiegeNull() {
-                return this.IsNull(this.tableGladiatoren.SiegeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetSiegeNull() {
-                this[this.tableGladiatoren.SiegeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsStartdatumNull() {
-                return this.IsNull(this.tableGladiatoren.StartdatumColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetStartdatumNull() {
-                this[this.tableGladiatoren.StartdatumColumn] = global::System.Convert.DBNull;
+                this[this.tableDataTable1.XpColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -928,22 +802,22 @@ namespace gladiaddi {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class GladiatorenRowChangeEvent : global::System.EventArgs {
+        public class DataTable1RowChangeEvent : global::System.EventArgs {
             
-            private GladiatorenRow eventRow;
+            private DataTable1Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GladiatorenRowChangeEvent(GladiatorenRow row, global::System.Data.DataRowAction action) {
+            public DataTable1RowChangeEvent(DataTable1Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GladiatorenRow Row {
+            public DataTable1Row Row {
                 get {
                     return this.eventRow;
                 }

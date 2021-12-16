@@ -41,9 +41,13 @@ namespace gladiaddi
             GladiXp.Text = gladiator.Xp.ToString();
             Gladi = gladiator;
             Gladi.Level = SetLevel(gladiator);
-            CoinTxt.Text = gladiator.Coins.ToString();
+            CoinTxt.Text =  "Coins"+ gladiator.Coins.ToString();
             string bitmapPath = @"C:\Users\tanzm\source\repos\gladiaddi\Images\";
             BitmapImage bitmapImage = new BitmapImage(new Uri(bitmapPath + gladiator.ImgUrl, UriKind.Absolute));
+            if(bitmapImage == null)
+            {
+                bitmapImage = new BitmapImage(new Uri(bitmapPath + "GladiFace001.png"));
+            }
             GladiImg.Source = bitmapImage;
 
         }

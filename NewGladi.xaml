@@ -4,43 +4,54 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:gladiaddi"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page1">
+      mc:Ignorable="d" d:DesignWidth="800"
+      Title="Page1" Height="632.857">
 
-    <Grid Height="505" VerticalAlignment="Top" Margin="0,0,0,-55">
+    <Grid Height="636" VerticalAlignment="Top" Margin="0,0,0,-28.571" Background="#FF610F0F">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Background="#FFA81B1B"  HorizontalAlignment="Center" Margin="61,10,60.857,10" >
+            <Rectangle Height="40"/>
+            <Image x:Name="ImageMerkur" Height="134"  Source="GladiFace001.png" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="MerkurMagicRadio" Content="Merkur Magic&#xA;" HorizontalAlignment="Center"   GroupName="GladiChoice" Checked="OnChecked" FontSize="16"/>
+            <Image x:Name="ImageGladiBoy" Height="134"  Source="GladiFace002.png" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="GladiBoyRadio" Content="GladiBoy&#xA;" HorizontalAlignment="Center"  GroupName="GladiChoice" Checked="OnChecked" FontSize="16"/>
+            <Image x:Name="ImageBasher" Height="120" Source="GladiFace003.png" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="135"/>
 
-        <StackPanel Background="White" Height="505" VerticalAlignment="Top" HorizontalAlignment="Left" Width="197">
-            <Image x:Name="ImageMerkur" Height="134"  Source="GladiFace001.png" HorizontalAlignment="Left"/>
-            <RadioButton x:Name="MerkurMagicRadio" Content="Merkur Magic&#xA;" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="21" Width="101" GroupName="GladiChoice" Checked="OnChecked"/>
-            <Image x:Name="ImageGladiBoy" Height="134"  Source="GladiFace002.png" HorizontalAlignment="Left"/>
-            <RadioButton x:Name="GladiBoyRadio" Content="GladiBoy&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Height="21" Width="79" GroupName="GladiChoice" Checked="OnChecked"/>
-            <Image x:Name="ImageBasher" Height="120" Source="GladiFace003.png" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="135"/>
-
-            <RadioButton x:Name="BasherRadio" Content="The Basher&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Height="21" Width="79" GroupName="GladiChoice" Checked="OnChecked"/>
+            <RadioButton x:Name="BasherRadio" Content="The Basher&#xA;"  GroupName="GladiChoice" Checked="OnChecked" HorizontalAlignment="Center" FontSize="16"/>
 
 
-
-        </StackPanel>
-        <StackPanel HorizontalAlignment="Right" Width="603" Background="White">
-            <Label>
-                <TextBox x:Name="TBName" Height="23" TextWrapping="Wrap" Text="Namen eingeben" Width="120"/>
-            </Label>
-            <Label>Ausdauer</Label>
-            <TextBlock x:Name="StaminaText" TextWrapping="Wrap" Text="TextBlock"/>
-
-            <Label/>
-            <Label>Angriff</Label>
-            <TextBlock x:Name="AttackText"  TextWrapping="Wrap" Text="TextBlock"/>
-
-            <Label/>
-            <Label>Verteidigung</Label>
-            <TextBlock x:Name="DefenseText"  TextWrapping="Wrap" Text="TextBlock"/>
-
-            <Label/>
-            <Button x:Name="GoBtn" Content="Go!!!" Click="OnClickGo" Margin="0,0,-0.143,0" HorizontalAlignment="Left" Width="603" Height="25"/>
 
         </StackPanel>
+        <StackPanel Grid.Column="1"  Background="#FFA81B1B" Grid.ColumnSpan="2" Margin="0.143,10,266,0" Height="616" VerticalAlignment="Top">
+            <Rectangle Height="40"/>
+            <Label FontSize="35">Name</Label>
+            <TextBox x:Name="TBName" Height="23" TextWrapping="Wrap" Text="Namen eingeben" Margin="10,0,9.857,0"/>
+        
+            <Label FontSize="35">Ausdauer</Label>
+            <TextBlock x:Name="StaminaText" TextWrapping="Wrap" Text="TextBlock" FontSize="25" TextAlignment="Center" Foreground="#FF2AFF00"/>
 
+            <Label/>
+            <Label FontSize="35">Angriff</Label>
+            <TextBlock x:Name="AttackText"  TextWrapping="Wrap" Text="TextBlock" Foreground="#FFFF5000" FontSize="25" TextAlignment="Center"/>
+
+            <Label/>
+            <Label FontSize="35">Verteidigung</Label>
+            <TextBlock x:Name="DefenseText"  TextWrapping="Wrap" Text="TextBlock" FontSize="25" TextAlignment="Center" Foreground="#FF0004FF"/>
+
+            <Rectangle Height="65"/>
+            <Button x:Name="GoBtn" Content="" Click="OnClickGo" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="100">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/start.png"/>
+                </Button.Background>
+            </Button>
+
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+
+        </StackPanel>
     </Grid>
 </Page>

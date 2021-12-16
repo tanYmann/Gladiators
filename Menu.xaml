@@ -8,20 +8,20 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Menu">
 
-    <Grid Background="White" Margin="0,0,-474,-189.714">
+    <Grid Background="White" Margin="0,0,-797,-396.714" >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="151*"/>
-            <ColumnDefinition Width="500*"/>
-            <ColumnDefinition Width="623*"></ColumnDefinition>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" Margin="0,10,0,230" HorizontalAlignment="Left" Width="132">
+        <StackPanel Grid.Column="0" HorizontalAlignment="Left" >
             <Rectangle Height="61"/>
             <Button x:Name="trainBtn" Width="80" Height="30" Click="OnClickTrain" Content="Trainieren"/>
             <Button x:Name="fightBtn" Width="80" Height="30" Click="OnFightBtnClick" Content="Kämpfen"/>
             <Button x:Name="statBtn" Width="80" Height="30" Click="OnClickStatBtn" Content="Statistik"/>
             <Button x:Name="menuBtn" Width="80" Height="30" Click="OnClickMenu" Content="Menü"/>
         </StackPanel>
-        <StackPanel  Grid.Column="1" Margin="59.143,0,11.857,0" >
+        <StackPanel  Grid.Column="1" HorizontalAlignment="Left" >
             <Rectangle Height="40"/>
             <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Name.png" Height="36" />
             <TextBlock x:Name="GladiName" FontSize="40" HorizontalAlignment="Center"/>
@@ -35,9 +35,10 @@
             <TextBlock x:Name="GladiLevel" FontSize="40" HorizontalAlignment="Center"/>
             <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Xp.png" Height="35"/>
             <TextBlock x:Name="GladiXp" FontSize="40" HorizontalAlignment="Center"/>
+            <TextBlock x:Name="CoinTxt" TextWrapping="Wrap" Text="TextBlock"  FontSize="55" TextAlignment="Center"/>
         </StackPanel>
-        <StackPanel Grid.ColumnSpan="2" Margin="0,0,433.857,0" />
-        <TextBlock x:Name="CoinTxt" Grid.Column="2" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="277" Margin="0.143,319,10.286,0"/>
+        <StackPanel Grid.ColumnSpan="2"  />
+       
         <Image x:Name="GladiImg" Grid.Column="2" HorizontalAlignment="Left" Height="260" Margin="10.143,10,0,0" VerticalAlignment="Top" Width="238"/>
 
 
