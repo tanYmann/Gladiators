@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -41,7 +42,7 @@ namespace gladiaddi
             GladiXp.Text = gladiator.Xp.ToString();
             Gladi = gladiator;
             Gladi.Level = SetLevel(gladiator);
-            CoinTxt.Text =  "Coins"+ gladiator.Coins.ToString();
+            CoinTxt.Text =   gladiator.Coins.ToString();
             string bitmapPath = @"C:\Users\tanzm\source\repos\gladiaddi\Images\";
             BitmapImage bitmapImage = new BitmapImage(new Uri(bitmapPath + gladiator.ImgUrl, UriKind.Absolute));
             if(bitmapImage == null)
@@ -89,9 +90,24 @@ namespace gladiaddi
             NavigationService.Navigate(new Page2(Gladi));
         }
 
-        private void OnClickBacK(object sender, RoutedEventArgs e)
+        private void OnClickSave(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(Gladi));
+            string query = "Insert into Saves (Name,Stamina,Attack,Defense,Fights,Won,Level,Xp,ImgUrl,Coins) values (@Name,@Stamina,@Attack,@Defense,@Fights,@Won,@Level,@Xp,@ImgUrl,@Coins)";
+            SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Gladiaddi;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            SqlCommand saveCommand = new SqlCommand(query, connection);
+            saveCommand.Parameters.AddWithValue("@Name", Gladi.Name);
+            saveCommand.Parameters.AddWithValue("@Stamina", Gladi.Stamina);
+            saveCommand.Parameters.AddWithValue("@Attack", Gladi.Attack);
+            saveCommand.Parameters.AddWithValue("@Defense", Gladi.Defense);
+            saveCommand.Parameters.AddWithValue("@Fights", Gladi.Fights);
+            saveCommand.Parameters.AddWithValue("@Won", Gladi.Wins);
+            saveCommand.Parameters.AddWithValue("@Level", Gladi.Level);
+            saveCommand.Parameters.AddWithValue("@Xp", Gladi.Xp);
+            saveCommand.Parameters.AddWithValue("@ImgUrl", Gladi.ImgUrl);
+            saveCommand.Parameters.AddWithValue("@Coins", Gladi.Coins);
+            connection.Open();
+            saveCommand.ExecuteNonQuery();
+            connection.Close();
         }
     }
 }

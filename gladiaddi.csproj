@@ -80,12 +80,29 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Connector.cs" />
+    <Compile Include="LoadGladi.xaml.cs">
+      <DependentUpon>LoadGladi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoadOrNew.xaml.cs">
+      <DependentUpon>LoadOrNew.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page2.xaml.cs">
       <DependentUpon>Page2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page3.xaml.cs">
+      <DependentUpon>Page3.xaml</DependentUpon>
     </Compile>
     <Compile Include="Training.xaml.cs">
       <DependentUpon>Training.xaml</DependentUpon>
     </Compile>
+    <Page Include="LoadGladi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoadOrNew.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -112,6 +129,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -233,7 +254,7 @@
     <Resource Include="Images\start.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\back#.png" />
+    <Resource Include="Images\back.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Menu.png" />
@@ -256,6 +277,113 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Fight_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="savebtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\loadGladiator.png" />
+    <Resource Include="Images\newGladiator.png" />
+    <Resource Include="Images\savebtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\Attack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\backbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\background__start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\Coins#.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\coins_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\Defense.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\Fight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\Fight_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\GladiFace001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\GladiFace002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\GladiFace003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\Level.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\loadGladiator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\Name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\newGladiator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\NewTitle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\pergament.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\pushAttack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\pushDefense.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\pushStamina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\savebtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\SaveSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\Stamina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\stamina_neu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\stats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\Title.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\Training.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\Xp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images - Kopieren\ZIGZAG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="newGladiator.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

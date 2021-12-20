@@ -16,21 +16,23 @@ using System.Windows.Shapes;
 namespace gladiaddi
 {
     /// <summary>
-    /// Interaktionslogik für Page2.xaml
+    /// Interaktionslogik für LoadOrNew.xaml
     /// </summary>
-    public partial class Start : Page
+    public partial class LoadOrNew : Page
     {
-       
-        public Start()
+        public LoadOrNew()
         {
             InitializeComponent();
-            
         }
 
-        private void OnClickStart(object sender, RoutedEventArgs e)
+        private void OnClickLoad(object sender, RoutedEventArgs e)
         {
-            
-            this.NavigationService.Navigate(new LoadOrNew());
+            NavigationService.Navigate(new LoadGladi());
+        }
+
+        private void OnClickNewGladi(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new NewGladi());
         }
     }
 }

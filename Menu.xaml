@@ -1,74 +1,153 @@
-﻿<Page x:Class="gladiaddi.Menu"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:gladiaddi"      
-      Height="Auto" Title="Menu" Width="Auto" >
+﻿<Page
+    x:Class="gladiaddi.Menu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:gladiaddi"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Menu"
+    Width="Auto"
+    Height="Auto">
 
-    <Grid Background="#FF6F1515" Margin="0,0,-0.286,0" HorizontalAlignment="Left" Width="1378"  >
+    <Grid
+        Width="1378"
+        Margin="0,0,-0.286,0"
+        HorizontalAlignment="Left"
+        Background="#FF6F1515">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="185" />
 
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" Margin="0,0,32.143,-0.429">
-            <Rectangle Height="61"/>
-            <Button x:Name="trainBtn" Height="90" Click="OnClickTrain" Content="" >
+            <Rectangle Height="61" />
+            <Button
+                x:Name="trainBtn"
+                Height="90"
+                Click="OnClickTrain"
+                Content="">
                 <Button.Background>
-                    <ImageBrush ImageSource="C:\Users\tanzm\source\repos\gladiaddi\Images\Training.png"/>
+                    <ImageBrush ImageSource="C:\Users\tanzm\source\repos\gladiaddi\Images\Training.png" />
                 </Button.Background>
             </Button>
-            <Button x:Name="fightBtn" Height="90" Click="OnFightBtnClick" Content="" >
+            <Button
+                x:Name="fightBtn"
+                Height="90"
+                Click="OnFightBtnClick"
+                Content="">
                 <Button.Background>
-                    <ImageBrush ImageSource="C:\Users\tanzm\source\repos\gladiaddi\Images\Fight_new.png"/>
+                    <ImageBrush ImageSource="C:\Users\tanzm\source\repos\gladiaddi\Images\Fight_new.png" />
                 </Button.Background>
 
             </Button>
-            <Button x:Name="statBtn" Height="90" Click="OnClickStatBtn" Content="" >
+            <Button
+                x:Name="statBtn"
+                Height="90"
+                Click="OnClickStatBtn"
+                Content="">
                 <Button.Background>
-                    <ImageBrush ImageSource="C:\Users\tanzm\source\repos\gladiaddi\Images\stats.png"/>
+                    <ImageBrush ImageSource="C:\Users\tanzm\source\repos\gladiaddi\Images\stats.png" />
                 </Button.Background>
             </Button>
-            <Button x:Name="menuBtn" Height="90" Click="OnClickMenu" Content="">
+            <Button
+                x:Name="menuBtn"
+                Height="90"
+                Click="OnClickMenu"
+                Content="">
                 <Button.Background>
-                    <ImageBrush ImageSource="C:\Users\tanzm\source\repos\gladiaddi\Images\Menu.png"/>
+                    <ImageBrush ImageSource="C:\Users\tanzm\source\repos\gladiaddi\Images\Menu.png" />
                 </Button.Background>
             </Button>
-            <Button Height="90" Click="OnClickBacK">
+            <Button x:Name="SaveBtn" Height="90" Click="OnClickSave">
                 <Button.Background>
-                    <ImageBrush ImageSource="C:\Users\tanzm\source\repos\gladiaddi\Images\back#.png"/>
+                    <ImageBrush ImageSource="savebtn.png" />
                 </Button.Background>
             </Button>
         </StackPanel>
-        <StackPanel Margin="0,0,6.143,-0.429" Height="961" VerticalAlignment="Bottom" Grid.Column="1" HorizontalAlignment="Right" Width="629">
-            <Rectangle Height="40"/>
-            <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Name.png" Height="75" Width="200" >
+        <StackPanel
+            Grid.Column="1"
+            Width="629"
+            Height="961"
+            Margin="0,0,6.714,-10.429"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom">
+            <Rectangle Height="40" />
+            <Image
+                Width="200"
+                Height="75"
+                Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Name.png">
                 <Image.OpacityMask>
-                    <ImageBrush ImageSource="Images/Name.png"/>
+                    <ImageBrush ImageSource="Images/Name.png" />
                 </Image.OpacityMask>
             </Image>
-            <TextBlock x:Name="GladiName" FontSize="40" HorizontalAlignment="Center"/>
-            <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Stamina_neu.png" Height="75" Width="200" >
-
-            </Image>
-            <TextBlock x:Name="GladiStamina" FontSize="40" HorizontalAlignment="Center"/>
-            <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Attack.png" Height="75" Width="200" />
-            <TextBlock x:Name="GladiAttack" FontSize="40" HorizontalAlignment="Center"/>
-            <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Defense.png" Height="75" Width="200" />
-            <TextBlock x:Name="GladiDefense" FontSize="40" HorizontalAlignment="Center"/>
-            <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Level.png" Height="75" Width="200" />
-            <TextBlock x:Name="GladiLevel" FontSize="40" HorizontalAlignment="Center"/>
-            <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Xp.png" Height="75" Width="200" />
-            <TextBlock x:Name="GladiXp" FontSize="40" HorizontalAlignment="Center"/>
-            <Image Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Coins#.png" Height="75" Width="200"></Image>
-            <TextBlock x:Name="CoinTxt" TextWrapping="Wrap" Text="TextBlock" FontFamily="Copperplate Gothic Light"  FontSize="25" TextAlignment="Center" Foreground="Gold"/>
-            <Rectangle Height="50"/>
+            <TextBlock
+                x:Name="GladiName"
+                HorizontalAlignment="Center"
+                FontSize="40" FontFamily="Kanalisirung" Foreground="Gold"/>
+            <Image
+                Width="200"
+                Height="75"
+                Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Stamina_neu.png" />
+            <TextBlock
+                x:Name="GladiStamina"
+                HorizontalAlignment="Center"
+                FontSize="40" FontFamily="Kanalisirung" Foreground="Gold"/>
+            <Image
+                Width="200"
+                Height="75"
+                Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Attack.png" />
+            <TextBlock
+                x:Name="GladiAttack"
+                HorizontalAlignment="Center"
+                FontSize="40" FontFamily="Kanalisirung" Foreground="Gold"/>
+            <Image
+                Width="200"
+                Height="75"
+                Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Defense.png" />
+            <TextBlock
+                x:Name="GladiDefense"
+                HorizontalAlignment="Center"
+                FontSize="40" FontFamily="Kanalisirung" Foreground="Gold" />
+            <Image
+                Width="200"
+                Height="75"
+                Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Level.png" />
+            <TextBlock
+                x:Name="GladiLevel"
+                HorizontalAlignment="Center"
+                FontSize="40" FontFamily="Kanalisirung" Foreground="Gold"/>
+            <Image
+                Width="200"
+                Height="75"
+                Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Xp.png" />
+            <TextBlock
+                x:Name="GladiXp"
+                HorizontalAlignment="Center"
+                FontSize="40" FontFamily="Kanalisirung" Foreground="Gold"/>
+            <Image
+                Width="200"
+                Height="75"
+                Source="C:\Users\tanzm\source\repos\gladiaddi\Images\Coins#.png" />
+            <TextBlock
+                x:Name="CoinTxt"
+                FontFamily="Kanalisirung"
+                FontSize="25"
+                Foreground="Gold"
+                Text="TextBlock"
+                TextAlignment="Center"
+                TextWrapping="Wrap" />
+            <Rectangle Height="50" />
         </StackPanel>
         <StackPanel Grid.Column="2" Width="Auto">
-            <Rectangle Height="40"></Rectangle>
-            <Image x:Name="GladiImg" Grid.Column="2" HorizontalAlignment="Left" Height="260" VerticalAlignment="Top" Width="238"/>
+            <Rectangle Height="40" />
+            <Image
+                x:Name="GladiImg"
+                Grid.Column="2"
+                Width="238"
+                Height="260"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" />
         </StackPanel>
 
 

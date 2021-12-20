@@ -121,5 +121,7 @@ namespace gladiaddi
         {
             NavigationService.Navigate(new Menu(GladiPlayer));
         }
+
+      
     }
 }

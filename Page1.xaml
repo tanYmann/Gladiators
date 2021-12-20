@@ -17,21 +17,21 @@
 
         <StackPanel Background="#FF6F1515" Grid.ColumnSpan="2" Margin="10,10,266.714,10.286">
             <Rectangle Height="56" Margin="0,0,0.143,0"/>
-            <TextBlock TextWrapping="Wrap"  Text="Kämpfe insgesamt" Height="55" FontSize="20" TextAlignment="Center"/>
+            <TextBlock TextWrapping="Wrap"  Text="Kämpfe insgesamt" Height="55" FontSize="20" TextAlignment="Center" FontFamily="Kanalisirung"/>
             <TextBlock x:Name="KmpfTxt" FontSize="25" TextWrapping="Wrap" Height="35" Margin="79,0,77.857,0" HorizontalAlignment="Center" Foreground="Gold"/>
 
 
 
-            <TextBlock TextWrapping="Wrap" FontSize="20" TextAlignment="Center" Text="Siegreiche Kämpfe;" Height="55"/>
-            <TextBlock x:Name="SiegTxt" FontSize="25" TextWrapping="Wrap" Text="SiegTxt" Height="55"  Foreground="Gold" HorizontalAlignment="Center"/>
-            <TextBlock TextWrapping="Wrap" FontSize="20" TextAlignment="Center" Height="55" Text="Durchschnittliche Punkte pro Kampf: "/>
+            <TextBlock TextWrapping="Wrap" FontSize="20" TextAlignment="Center" Text="Siegreiche Kämpfe;" Height="55" FontFamily="Kanalisirung"/>
+            <TextBlock x:Name="SiegTxt" FontSize="25" TextWrapping="Wrap" Text="SiegTxt" Height="55"  Foreground="Gold" HorizontalAlignment="Center" FontFamily="Kanalisirung"/>
+            <TextBlock TextWrapping="Wrap" FontSize="20" TextAlignment="Center" Height="55" Text="Durchschnittliche Punkte pro Kampf: " FontFamily="Kanalisirung"/>
             <TextBlock x:Name="PkteTxt" TextWrapping="Wrap" Height="55" Margin="0,0,-1.143,0" Foreground="Gold"/>
 
             <TextBlock FontSize="25" HorizontalAlignment="Center" TextWrapping="Wrap" Height="55" />
         </StackPanel>
         <StackPanel Grid.Column="1" Background="#FF6F1515" Grid.ColumnSpan="2" Margin="0.143,10,266,10.286">
             <Rectangle Height="40"/>
-            <TextBlock FontSize="35" HorizontalAlignment="Center">Statistik</TextBlock>
+            <TextBlock FontSize="35" HorizontalAlignment="Center" FontFamily="Kanalisirung">Statistik</TextBlock>
             <Image Grid.Column="1"  Source="twoGladsPNG.PNG" Height="223" VerticalAlignment="Top" Margin="0,0,-0.143,0"/>
 
             <Rectangle Height="52"/>
