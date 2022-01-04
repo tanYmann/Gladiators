@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Wordprocessing;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
@@ -10,6 +11,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -23,7 +25,7 @@ namespace gladiaddi
     /// </summary>
     public partial class LoadGladi : Page
     {
-        
+        public static DataGridView dataGrid= new DataGridView();
         public static Gladiator Gladi {get;set;}
         public LoadGladi()
         {
@@ -32,27 +34,45 @@ namespace gladiaddi
         }
 
         public void LoadData()
-        {   
-            string query = "SELECT * FROM SAVES";
-            SqlConnection connection = new SqlConnection(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = Gladiaddi; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
+        {
+            dataGrid.DataSource = DataGridSaves;
+            dataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGrid.MultiSelect = false;
+            string query = "SELECT * FROM GLADIATORS";
+            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tanzm\Documents\Gladiators.mdf;Integrated Security=True;Connect Timeout=30");
             SqlCommand getSaves = new SqlCommand(query, connection);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(getSaves);
-            DataTable table = new DataTable("Saves");
+            DataTable table = new DataTable("Gladiators");
             connection.Open();
             dataAdapter.Fill(table);
-            DataGridSaves.ItemsSource = table.DefaultView;
+            dataGrid.DataSource = table.DefaultView;
             connection.Close();
-                        
-
+     
+            
+            List<string> gladiData = new List<string>();
+            foreach(var entry in dataGrid.SelectedCells)
+            {
+                gladiData.Add(entry.ToString());
+            }
         }
 
-        public void SelectionToGladi()
+        DataSet dset = new DataSet();
+        /*
+        public void SelectionToGladi(
         {
-             
+
+            
+            List<string> gladiData = new List<string>();
+            foreach (var entry in )
+            {
+                gladiData.Add(entry.ToString());
+            }
+
         }
+*/
         private void OnClickLoad(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new NewGladi(Gladi));
+            NavigationService.Navigate(new Menu(Gladi));
         }
     }
 }

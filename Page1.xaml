@@ -37,7 +37,7 @@
             <Rectangle Height="52"/>
             <Button Content="" Height="62" Margin="0,0,86.857,0" HorizontalAlignment="Right" Width="86" Click="OnClickBack">
                 <Button.Background>
-                    <ImageBrush ImageSource="C:\Users\tanzm\source\repos\gladiaddi\Images\back#.png"/>
+                    <ImageBrush ImageSource="C:\Users\tanzm\source\repos\gladiaddi\Images\back.png"/>
                 </Button.Background>
             </Button>
         </StackPanel>

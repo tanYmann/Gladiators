@@ -19,30 +19,33 @@
         </Grid.ColumnDefinitions>
         <StackPanel>
             <Rectangle Height="40" />
+            <TextBlock x:Name="StaminaOpponwnt" Text="StaminaOpponent" />
             <TextBlock x:Name="GladiPlayerTxt" Height="90" />
             <Rectangle Height="40" />
             <TextBlock x:Name="StaminaPlayer" Text="StaminaPlayer" />
         </StackPanel>
 
         <StackPanel Grid.Column="1">
-            <Rectangle Height="40" />
+            <Rectangle Height="30" />
             <Button
                 x:Name="FightBtn"
-                Height="83"
+                Height="150"
+                Width="150"
                 Margin="0,0,-0.143,0"
                 Content="" Click="OnClickStart">
                 <Button.Background>
                     <ImageBrush ImageSource="Images/Fight_new.png" />
                 </Button.Background>
             </Button>
-            <Rectangle Height="40" />
-            <TextBlock x:Name="kampfLog" Text="KampfLog" />
-            <Rectangle Height="40" />
+            <Rectangle Height="5" />
+            <TextBlock x:Name="kampfLog" Text="KampfLog" Height="78" />
+            <Rectangle Height="5" />
 
 
             <Button
                 x:Name="EndBtn"
-                Height="88"
+                Height="150"
+                Width="150"
                 Margin="0,0,-0.143,0"
                 BorderBrush="{x:Null}"
                 Click="EndBtn_Click"
@@ -52,22 +55,18 @@
                     <ImageBrush ImageSource="Images/back.png" />
                 </Button.Background>
             </Button>
-
-
-            <Image
-                x:Name="ResultImg"
-                Width="Auto"
-                Height="56"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top" />
         </StackPanel>
         <StackPanel Grid.Column="2">
             <Rectangle Height="40" />
             <TextBlock x:Name="OpponentTxt" Height="90" />
 
             <Rectangle Height="40" />
-            <TextBlock x:Name="StaminaOpponwnt" Text="StaminaOpponent" />
             <Rectangle Height="40" />
+            <Image
+                x:Name="ResultImg"
+                Width="Auto"
+                Height="56"
+                />
 
         </StackPanel>
 

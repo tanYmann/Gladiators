@@ -37,10 +37,30 @@ namespace gladiaddi
         {
             
             Random rnd = new Random();
-            int factor = gladiPlayer.Level;
-            gladiOpponent.Stamina =  rnd.Next(6,10) * 10* factor;
-            gladiOpponent.Defense = 1 * rnd.Next(1,10) * factor;
-            gladiOpponent.Attack = 1  * rnd.Next(1,10) *  factor ;
+            int strengthOpp = 100;
+            int baseStrength = rnd.Next(1,100);
+            if (baseStrength < 4)
+            {
+                strengthOpp *= 2;
+                gladiOpponent.Stamina = strengthOpp;
+                gladiOpponent.Attack = gladiPlayer.Attack - baseStrength;
+                gladiOpponent.Defense = gladiPlayer.Attack + baseStrength;
+            }
+
+            else if (4 < baseStrength && baseStrength < 80)
+            {
+
+                gladiOpponent.Stamina = rnd.Next(85, 111);
+                gladiOpponent.Defense = 1 * rnd.Next(3, 12);
+                gladiOpponent.Attack = 1 * rnd.Next(3, 12);
+            }
+
+            else if (80 < baseStrength)
+            {
+                gladiOpponent.Stamina = gladiPlayer.Stamina - (gladiPlayer.Stamina/10);
+                gladiOpponent.Attack = gladiPlayer.Attack ;
+                gladiOpponent.Defense = gladiPlayer.Defense ;
+            }
         }
         public int schaden = 0;
         public void Fighting(Gladiator gladiPlayer, Gladiator gladiOpponent)

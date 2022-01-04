@@ -92,8 +92,8 @@ namespace gladiaddi
 
         private void OnClickSave(object sender, RoutedEventArgs e)
         {
-            string query = "Insert into Saves (Name,Stamina,Attack,Defense,Fights,Won,Level,Xp,ImgUrl,Coins) values (@Name,@Stamina,@Attack,@Defense,@Fights,@Won,@Level,@Xp,@ImgUrl,@Coins)";
-            SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Gladiaddi;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            string query = "Insert into Gladiators (Name,Stamina,Attack,Defense,Fights,Won,Level,Xp,ImgUrl,Coins) values (@Name,@Stamina,@Attack,@Defense,@Fights,@Won,@Level,@Xp,@ImgUrl,@Coins)";
+            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tanzm\Documents\Gladiators.mdf;Integrated Security=True;Connect Timeout=30");
             SqlCommand saveCommand = new SqlCommand(query, connection);
             saveCommand.Parameters.AddWithValue("@Name", Gladi.Name);
             saveCommand.Parameters.AddWithValue("@Stamina", Gladi.Stamina);
