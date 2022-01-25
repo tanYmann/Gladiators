@@ -16,7 +16,7 @@
         <DataGrid x:Name="DataGridSaves" Height="310" Margin="0,10,10,0" VerticalAlignment="Top" Background="#FF960000" FontFamily="Kanalisirung" AlternatingRowBackground="#FFBCCA14" RowBackground="#FF960000" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" IsEnabled="False" HorizontalAlignment="Right" Width="943" Grid.RowSpan="2" RenderTransformOrigin="0.496,0.563" SelectionMode="Single">
             
         </DataGrid>
-        <Button Content="" Margin="424,177,423,9.714" Click="OnClickLoad" Grid.Row="1">
+        <Button x:Name="LoadBtn" Content="" Margin="424,177,423,9.714" Click="OnClickLoad" Grid.Row="1">
             <Button.Background>
                 <ImageBrush ImageSource="Images - Kopieren/loadGladiator.png"/>
             </Button.Background>

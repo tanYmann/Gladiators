@@ -1,9 +1,11 @@
 ﻿using DocumentFormat.OpenXml.Wordprocessing;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,54 +27,52 @@ namespace gladiaddi
     /// </summary>
     public partial class LoadGladi : Page
     {
-        public static DataGridView dataGrid= new DataGridView();
-        public static Gladiator Gladi {get;set;}
+        public static DataGridView dataGrid = new DataGridView();
+        public static Gladiator Gladi { get; set; }
+
         public LoadGladi()
         {
             InitializeComponent();
-            LoadData();
+      
         }
 
         public void LoadData()
         {
-            dataGrid.DataSource = DataGridSaves;
-            dataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGrid.MultiSelect = false;
-            string query = "SELECT * FROM GLADIATORS";
-            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tanzm\Documents\Gladiators.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlCommand getSaves = new SqlCommand(query, connection);
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(getSaves);
-            DataTable table = new DataTable("Gladiators");
-            connection.Open();
-            dataAdapter.Fill(table);
-            dataGrid.DataSource = table.DefaultView;
-            connection.Close();
-     
-            
-            List<string> gladiData = new List<string>();
-            foreach(var entry in dataGrid.SelectedCells)
+            List<Gladiator> gladiators = new List<Gladiator>();
+            using (StreamReader sr = File.OpenText(@"~/Saves/saves.json"))
             {
-                gladiData.Add(entry.ToString());
+                while (!sr.EndOfStream)
+                {
+                    JsonSerializer serializer = new JsonSerializer();
+                    Gladiator gladiJson = (Gladiator)serializer.Deserialize(sr, typeof(Gladiator));
+                    gladiators.Add(gladiJson);
+                }
+
             }
+            int i = 0;
+            DataTable loadTable = new DataTable();
+            loadTable.Columns.Add("Name");
+            loadTable.Columns.Add("Level");
+            loadTable.Columns.Add("Datum");
+
+            List<Gladiator> tableGladiators = new List<Gladiator>();
+            foreach (var item in gladiators)
+            {
+                DataRow row = loadTable.NewRow();
+                row.BeginEdit();
+                row.SetField(0, item.Name);
+                row.SetField(1, item.Level);
+                row.SetField(2, item.StartDate);
+                row.EndEdit();
+            }
+            DataSet LoadData = new DataSet();
+            LoadData.Tables.Add(loadTable);
+         
         }
 
-        DataSet dset = new DataSet();
-        /*
-        public void SelectionToGladi(
-        {
-
-            
-            List<string> gladiData = new List<string>();
-            foreach (var entry in )
-            {
-                gladiData.Add(entry.ToString());
-            }
-
-        }
-*/
         private void OnClickLoad(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(Gladi));
+
         }
     }
 }

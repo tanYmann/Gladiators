@@ -16,6 +16,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static gladiaddi.NewGladi;
+using Newtonsoft.Json.Serialization;
+using Newtonsoft.Json;
+
 namespace gladiaddi
 {
     /// <summary>
@@ -23,6 +26,7 @@ namespace gladiaddi
     /// </summary>
     partial class Menu : Page
     {
+        public static List<string> saveGames = new List<string>();
         public Gladiator Gladi;
         
         public Menu()
@@ -92,6 +96,19 @@ namespace gladiaddi
 
         private void OnClickSave(object sender, RoutedEventArgs e)
         {
+           
+            string output = JsonConvert.SerializeObject(Gladi);
+            
+            FileStream file = new FileStream(@"C:\Users\tanzm\source\repos\gladiaddi\Saves\saves.json", FileMode.OpenOrCreate);
+            StreamWriter sw = new StreamWriter(file);
+            
+            sw.WriteLine(sw.NewLine);
+            sw.WriteLine(output);
+            sw.Flush();
+            sw.Close();
+            file.Close();
+
+            /*
             string query = "Insert into Gladiators (Name,Stamina,Attack,Defense,Fights,Won,Level,Xp,ImgUrl,Coins) values (@Name,@Stamina,@Attack,@Defense,@Fights,@Won,@Level,@Xp,@ImgUrl,@Coins)";
             SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tanzm\Documents\Gladiators.mdf;Integrated Security=True;Connect Timeout=30");
             SqlCommand saveCommand = new SqlCommand(query, connection);
@@ -108,6 +125,7 @@ namespace gladiaddi
             connection.Open();
             saveCommand.ExecuteNonQuery();
             connection.Close();
+            */
         }
     }
 }

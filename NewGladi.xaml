@@ -29,7 +29,7 @@
         <StackPanel Grid.Column="1"  Background="#FFA81B1B" Grid.ColumnSpan="2" Margin="0.143,10,266,0" Height="616" VerticalAlignment="Top">
             <Rectangle Height="40"/>
             <Label FontSize="35" FontFamily="Kanalisirung">Name</Label>
-            <TextBox x:Name="TBName" Height="23" TextWrapping="Wrap" Text="Namen eingeben" Margin="10,0,9.857,0"/>
+            <TextBox x:Name="TBName" Height="23" TextWrapping="Wrap"  Margin="10,0,9.857,0"/>
         
             <Label FontSize="35" FontFamily="Kanalisirung">Ausdauer</Label>
             <TextBlock x:Name="StaminaText" TextWrapping="Wrap" Text="TextBlock" FontSize="25" TextAlignment="Center" Foreground="#FF2AFF00" FontFamily="Kanalisirung"/>
