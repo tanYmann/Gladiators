@@ -33,46 +33,26 @@ namespace gladiaddi
         public LoadGladi()
         {
             InitializeComponent();
-      
+            LoadData();
         }
 
-        public void LoadData()
+        public Gladiator LoadData()
         {
-            List<Gladiator> gladiators = new List<Gladiator>();
-            using (StreamReader sr = File.OpenText(@"~/Saves/saves.json"))
-            {
-                while (!sr.EndOfStream)
-                {
-                    JsonSerializer serializer = new JsonSerializer();
-                    Gladiator gladiJson = (Gladiator)serializer.Deserialize(sr, typeof(Gladiator));
-                    gladiators.Add(gladiJson);
-                }
 
-            }
-            int i = 0;
-            DataTable loadTable = new DataTable();
-            loadTable.Columns.Add("Name");
-            loadTable.Columns.Add("Level");
-            loadTable.Columns.Add("Datum");
+            TextReader tr = File.OpenText(@"C:\Users\tanzm\source\repos\gladiaddi\Saves\saves.json");
+            JsonSerializer serializer = new JsonSerializer();
+            Gladiator gladiJson = (Gladiator)serializer.Deserialize(tr, typeof(Gladiator));
 
-            List<Gladiator> tableGladiators = new List<Gladiator>();
-            foreach (var item in gladiators)
-            {
-                DataRow row = loadTable.NewRow();
-                row.BeginEdit();
-                row.SetField(0, item.Name);
-                row.SetField(1, item.Level);
-                row.SetField(2, item.StartDate);
-                row.EndEdit();
-            }
-            DataSet LoadData = new DataSet();
-            LoadData.Tables.Add(loadTable);
+
+
+
+            return gladiJson;
          
         }
 
         private void OnClickLoad(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Menu(LoadData()));
         }
     }
 }

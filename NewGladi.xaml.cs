@@ -42,7 +42,7 @@ namespace gladiaddi
            {
                 case "MerkurMagicRadio":
 
-                    this.gladiatorPlayer.Name = "GladiBoy";
+                    this.gladiatorPlayer.Name = TBName.Text;
                     gladiatorPlayer.Stamina = 100;
                     gladiatorPlayer.Attack = 11;
                     gladiatorPlayer.Defense = 3;
@@ -50,12 +50,13 @@ namespace gladiaddi
                     gladiatorPlayer.Level = 1;
                     gladiatorPlayer.Xp = 0;
                     gladiatorPlayer.Coins = 0;
+                    gladiatorPlayer.StartDate = DateTime.Now;
 
                     break;
 
                 case "GladiBoyRadio":
 
-                    this.gladiatorPlayer.Name = "MerkurMagic";
+                    this.gladiatorPlayer.Name = TBName.Text;
                     gladiatorPlayer.Stamina = 120;
                     gladiatorPlayer.Attack = 8;
                     gladiatorPlayer.Defense = 8;
@@ -63,11 +64,12 @@ namespace gladiaddi
                     gladiatorPlayer.Level = 1;
                     gladiatorPlayer.Xp = 0;
                     gladiatorPlayer.Coins = 0;
+                    gladiatorPlayer.StartDate = DateTime.Now;
                     break;
 
                 case "BasherRadio":
 
-                    this.gladiatorPlayer.Name = "Basher";
+                    this.gladiatorPlayer.Name = TBName.Text;
                     gladiatorPlayer.Stamina = 85;
                     gladiatorPlayer.Attack = 12;
                     gladiatorPlayer.Defense = 10;
@@ -75,13 +77,14 @@ namespace gladiaddi
                     gladiatorPlayer.Level = 1;
                     gladiatorPlayer.Xp = 0;
                     gladiatorPlayer.Coins = 0;
+                    gladiatorPlayer.StartDate = DateTime.Now;
                     break;
             }
 
             StaminaText.Text = gladiatorPlayer.Stamina.ToString();
             AttackText.Text = gladiatorPlayer.Attack.ToString();
             DefenseText.Text = gladiatorPlayer.Defense.ToString();
-            TBName.Text = gladiatorPlayer.Name;
+            
             
            
            

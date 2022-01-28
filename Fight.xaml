@@ -12,20 +12,24 @@
     mc:Ignorable="d">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="83*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <StackPanel>
+        <StackPanel Grid.ColumnSpan="2" Margin="0,0,266,0" Grid.RowSpan="2">
             <Rectangle Height="40" />
-            <TextBlock x:Name="StaminaOpponwnt" Text="StaminaOpponent" />
+           
             <TextBlock x:Name="GladiPlayerTxt" Height="90" />
             <Rectangle Height="40" />
             <TextBlock x:Name="StaminaPlayer" Text="StaminaPlayer" />
         </StackPanel>
 
-        <StackPanel Grid.Column="1">
+        <StackPanel Grid.Column="1" Grid.RowSpan="2">
             <Rectangle Height="30" />
             <Button
                 x:Name="FightBtn"
@@ -56,9 +60,9 @@
                 </Button.Background>
             </Button>
         </StackPanel>
-        <StackPanel Grid.Column="2">
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Margin="266,0,0,0" Grid.RowSpan="2">
             <Rectangle Height="40" />
-            <TextBlock x:Name="OpponentTxt" Height="90" />
+            <TextBlock x:Name="OpponentTxt" Height="378" Foreground="#FFF7FF00" FontFamily="Book Antiqua" FontSize="36" />
 
             <Rectangle Height="40" />
             <Rectangle Height="40" />

@@ -29,6 +29,7 @@ namespace gladiaddi
             GladiPlayer = gladiator;
             InitializeComponent();
             OpponentTxt.Text = "Ausdauer : " + opponent.Stamina.ToString() + "Angriff : " + opponent.Attack.ToString() + "Verteidigung :" + opponent.Defense.ToString() + "";
+            
             GladiPlayerTxt.Text = "Ausdauer : " + gladiator.Stamina.ToString() + "Angriff : " + gladiator.Attack.ToString() + "Verteidigung :" + gladiator.Defense.ToString() + "";
         }
       
@@ -37,30 +38,10 @@ namespace gladiaddi
         {
             
             Random rnd = new Random();
-            int strengthOpp = 100;
-            int baseStrength = rnd.Next(1,100);
-            if (baseStrength < 4)
-            {
-                strengthOpp *= 2;
-                gladiOpponent.Stamina = strengthOpp;
-                gladiOpponent.Attack = gladiPlayer.Attack - baseStrength;
-                gladiOpponent.Defense = gladiPlayer.Attack + baseStrength;
-            }
-
-            else if (4 < baseStrength && baseStrength < 80)
-            {
-
-                gladiOpponent.Stamina = rnd.Next(85, 111);
-                gladiOpponent.Defense = 1 * rnd.Next(3, 12);
-                gladiOpponent.Attack = 1 * rnd.Next(3, 12);
-            }
-
-            else if (80 < baseStrength)
-            {
-                gladiOpponent.Stamina = gladiPlayer.Stamina - (gladiPlayer.Stamina/10);
-                gladiOpponent.Attack = gladiPlayer.Attack ;
-                gladiOpponent.Defense = gladiPlayer.Defense ;
-            }
+            gladiOpponent.Stamina = rnd.Next(gladiPlayer.Stamina/2,gladiPlayer.Stamina*2);
+            gladiOpponent.Attack = rnd.Next(gladiPlayer.Attack/2,gladiPlayer.Attack*2);
+            gladiOpponent.Defense = rnd.Next(gladiPlayer.Defense / 2, gladiPlayer.Defense * 2);
+            
         }
         public int schaden = 0;
         public void Fighting(Gladiator gladiPlayer, Gladiator gladiOpponent)
@@ -92,7 +73,7 @@ namespace gladiaddi
                 {
                     schaden = schaden / -5;
                 }
-                kampfLog.Text = "Treffer! " + schaden.ToString() + " Schaden.";
+                kampfLog.Text += "Treffer! " + schaden.ToString() + " Schaden.";
                 defender.Stamina -= schaden;
                 StaminaPlayer.Text = defender.Stamina.ToString();
                
@@ -103,7 +84,7 @@ namespace gladiaddi
                     schaden = schaden / -5;
                 }
                 attacker.Stamina -= schaden;
-                kampfLog.Text = "Treffer! " + schaden.ToString() + " Schaden.";
+                kampfLog.Text += "Treffer! " + schaden.ToString() + " Schaden.";
                 StaminaPlayer.Text = attacker.Stamina.ToString();
                 
 
