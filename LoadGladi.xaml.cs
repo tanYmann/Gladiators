@@ -29,25 +29,27 @@ namespace gladiaddi
     {
         public static DataGridView dataGrid = new DataGridView();
         public static Gladiator Gladi { get; set; }
-
+        DirectoryInfo dirInfo = new DirectoryInfo(@"C:\Users\tanzm\source\repos\gladiaddi\Saves");
         public LoadGladi()
         {
+
             InitializeComponent();
-            LoadData();
+            foreach (FileInfo finfo in dirInfo.GetFiles())
+            {
+                FileListBox.Items.Add(finfo);
+            }
+                     
+            
+            
         }
 
         public Gladiator LoadData()
         {
 
-            TextReader tr = File.OpenText(@"C:\Users\tanzm\source\repos\gladiaddi\Saves\saves.json");
+            TextReader tr = File.OpenText(@"C:\Users\tanzm\source\repos\gladiaddi\Saves\"+FileListBox.SelectedItem.ToString());
             JsonSerializer serializer = new JsonSerializer();
             Gladiator gladiJson = (Gladiator)serializer.Deserialize(tr, typeof(Gladiator));
-
-
-
-
             return gladiJson;
-         
         }
 
         private void OnClickLoad(object sender, RoutedEventArgs e)

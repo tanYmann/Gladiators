@@ -96,10 +96,18 @@ namespace gladiaddi
 
         private void OnClickSave(object sender, RoutedEventArgs e)
         {
-           
+            List<string> fileList = new List<string>();
             string output = JsonConvert.SerializeObject(Gladi);
-            
-            FileStream file = new FileStream(@"C:\Users\tanzm\source\repos\gladiaddi\Saves\saves.json", FileMode.OpenOrCreate);
+            DirectoryInfo dirInfo = new DirectoryInfo(@"C:\Users\tanzm\source\repos\gladiaddi\Saves\");
+            foreach (FileInfo fileinfo in dirInfo.GetFiles())
+            {
+                fileList.Add(fileinfo.Name);
+            }
+            fileList.Sort();
+            int lastFileNumber = Int32.Parse(fileList.LastOrDefault().Substring(3,3));
+            lastFileNumber = lastFileNumber + 1;
+            string strConcat = lastFileNumber.ToString();
+            FileStream file = new FileStream(@"C:\Users\tanzm\source\repos\gladiaddi\Saves\sav"+strConcat+".json", FileMode.OpenOrCreate);
             StreamWriter sw = new StreamWriter(file);
             
             sw.WriteLine(sw.NewLine);

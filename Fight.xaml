@@ -23,13 +23,13 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.ColumnSpan="2" Margin="0,0,266,0" Grid.RowSpan="2">
             <Rectangle Height="40" />
-           
-            <TextBlock x:Name="GladiPlayerTxt" Height="90" />
-            <Rectangle Height="40" />
-            <TextBlock x:Name="StaminaPlayer" Text="StaminaPlayer" />
+            <TextBlock x:Name="StaminaPlayerTxt"  Height="43" Foreground="#FFF7FF00" FontFamily="Book Antiqua" FontSize="36"  />
+
+            <TextBlock x:Name="AttackPlayerTxt" Height="43" Foreground="#FFF7FF00" FontFamily="Book Antiqua" FontSize="36" HorizontalAlignment="Center" />
+            <TextBlock x:Name="DefensePlayerTxt" Height="43" Foreground="#FFF7FF00" FontFamily="Book Antiqua" FontSize="36" />
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.RowSpan="2">
+        <StackPanel Grid.Column="1" Grid.RowSpan="2" Height="450" VerticalAlignment="Top">
             <Rectangle Height="30" />
             <Button
                 x:Name="FightBtn"
@@ -60,16 +60,17 @@
                 </Button.Background>
             </Button>
         </StackPanel>
-        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Margin="266,0,0,0" Grid.RowSpan="2">
+        <StackPanel Grid.Column="2" Grid.RowSpan="2" HorizontalAlignment="Center" Width="267" Height="450" VerticalAlignment="Top">
             <Rectangle Height="40" />
-            <TextBlock x:Name="OpponentTxt" Height="378" Foreground="#FFF7FF00" FontFamily="Book Antiqua" FontSize="36" />
 
-            <Rectangle Height="40" />
+            <TextBlock x:Name="OpponentStamina1" Height="43" Foreground="#FFF7FF00" FontFamily="Book Antiqua" FontSize="36" />
+            <TextBlock x:Name="OpponentAttack" Height="43" Foreground="#FFF7FF00" FontFamily="Book Antiqua" FontSize="36" />
+            <TextBlock x:Name="OpponentDefense" Height="43" Foreground="#FFF7FF00" FontFamily="Book Antiqua" FontSize="36" />
             <Rectangle Height="40" />
             <Image
                 x:Name="ResultImg"
                 Width="Auto"
-                Height="56"
+                Height="40"
                 />
 
         </StackPanel>

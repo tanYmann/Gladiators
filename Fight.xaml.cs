@@ -28,9 +28,13 @@ namespace gladiaddi
             SetOpponent(gladiator, opponent);
             GladiPlayer = gladiator;
             InitializeComponent();
-            OpponentTxt.Text = "Ausdauer : " + opponent.Stamina.ToString() + "Angriff : " + opponent.Attack.ToString() + "Verteidigung :" + opponent.Defense.ToString() + "";
-            
-            GladiPlayerTxt.Text = "Ausdauer : " + gladiator.Stamina.ToString() + "Angriff : " + gladiator.Attack.ToString() + "Verteidigung :" + gladiator.Defense.ToString() + "";
+            OpponentStamina1.Text = "Ausdauer : " + opponent.Stamina.ToString();
+            OpponentAttack.Text = "Angriff : " + opponent.Attack.ToString();
+            OpponentDefense.Text = "Verteidigung : " + opponent.Defense.ToString();
+
+            StaminaPlayerTxt.Text = "Ausdauer : " + gladiator.Stamina.ToString();
+            AttackPlayerTxt.Text = "Angriff : " + gladiator.Attack.ToString();
+            DefensePlayerTxt.Text = "Verteidigung : " + gladiator.Defense.ToString();
         }
       
 
@@ -75,7 +79,7 @@ namespace gladiaddi
                 }
                 kampfLog.Text += "Treffer! " + schaden.ToString() + " Schaden.";
                 defender.Stamina -= schaden;
-                StaminaPlayer.Text = defender.Stamina.ToString();
+                StaminaPlayerTxt.Text = defender.Stamina.ToString();
                
 
                 schaden = (defender.Attack * dice.Next(1,6)) - (attacker.Defense * dice.Next(1, 6));
@@ -85,7 +89,7 @@ namespace gladiaddi
                 }
                 attacker.Stamina -= schaden;
                 kampfLog.Text += "Treffer! " + schaden.ToString() + " Schaden.";
-                StaminaPlayer.Text = attacker.Stamina.ToString();
+                StaminaPlayerTxt.Text = attacker.Stamina.ToString();
                 
 
             }
