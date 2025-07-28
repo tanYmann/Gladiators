@@ -14,7 +14,7 @@
         </Grid.Background>
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock HorizontalAlignment="Center" FontFamily="MingLiU_HKSCS-ExtB" Foreground="#FFFF0007" FontSize="35" FontWeight="Bold">Willkomen bei Gladiators</TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontFamily="MingLiU_HKSCS-ExtB" Foreground="#FFFF0007" FontSize="35" FontWeight="Bold">Willkommen bei Gladiators</TextBlock>
             <Rectangle Height="80"/>
             <Button x:Name="StartBtn" Click="OnClickStart" Width="167" RenderTransformOrigin="0.431,2.792" Height="172" >
                 <Button.Background>
